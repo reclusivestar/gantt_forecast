@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+.gantt-bar {
+  background-color: #3498db;
+  height: 100%;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gantt-bar::after {
+  content: '◄►'; /* Resizing indicator */
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  font-size: 10px;
+  color: #ffffff;
+  cursor: ew-resize;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dragging-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px; /* Adjust as needed */
+  cursor: move;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent to indicate drag area */
 }

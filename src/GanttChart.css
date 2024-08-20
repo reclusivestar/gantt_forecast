@@ -1,0 +1,286 @@
+/* GanttChart.css */
+
+body {
+  margin-top: 3em;
+  background-color: #000a3c;
+  color: #fff;
+}
+
+.header {
+  background-color: #0064ff; /* Blue color for the header */
+  color: white; /* Text color */
+  padding: 6px 0px;
+  margin-bottom: 20px; /* Spacing between header and Gantt chart */
+  border: 1px solid white;
+  width: 79.8%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gantt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gantt-container .gantt-chart-wrapper {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  width: 80%;
+}
+
+.filter-panel-box {
+  background-color: #000a3c; /* Choose your desired background color */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  align-self: flex-start; /* Align to the start of the flex container (left) */
+  margin-bottom: 20px; /* Separate from the Gantt chart */
+  margin-left: 30px;
+  width: fit-content;
+  max-width: 38%;
+  color: #fff;
+}
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 10px; /* Add space between elements */
+  margin-bottom: 10px;
+}
+
+.task-input,
+.choose-section {
+  flex: 1; /* Allow the input and select elements to expand */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.add-task-btn,
+.delete-section-btn {
+  padding: 8px 16px;
+  background-color: #0064ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.add-task-btn:hover,
+.delete-section-btn:hover {
+  background-color: #0056b3;
+}
+
+.choose-section {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.contract-type {
+  margin-left: 0px;
+}
+
+/* Additional style to move 'Add Network' to the next line */
+.add-network-container {
+  flex-basis: 100%; /* Force the 'Add Network' input to be on a new line */
+  display: flex;
+}
+
+.add-task-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-forecast-btn {
+  margin-top: 0.8em; /* Adjust as needed */
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Existing styles */
+
+.gantt-chart-wrapper {
+  position: relative;
+  width: 1200px;
+}
+
+.timeline {
+  display: flex;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  margin-bottom: 100px;
+}
+
+.timeline-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #0064ff;
+}
+
+.layout {
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+
+.ganttItem {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  position: relative;
+  height: 40px; /* Adjust the height as needed for your task block */
+  z-index: 1;
+  color: #000;
+}
+
+.doneDeal {
+  background-color: #00aad7;
+}
+
+.scenario {
+  background-color: #ffd400;
+}
+
+.task-details {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+  padding-left: 25px;
+}
+
+.delete-btn {
+  position: absolute;
+  left: 5px; /* Adjust this value as needed for your preferred positioning */
+  top: 50%; /* Adjust this value as needed for your preferred positioning */
+  transform: translateY(-50%);
+  color: black;
+  border: none;
+  display: flex;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+  padding: 0px 3px;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+}
+
+.date-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2em;
+}
+
+.date-picker {
+  margin-right: 20px;
+}
+
+.date-picker,
+.increment-options {
+  display: flex; /* Display as flex containers */
+  align-items: center; /* Align items vertically within each container */
+}
+
+.date-picker label,
+.increment-options label {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.add-network-container label {
+  margin-right: 5px;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.upload-label {
+  margin-right: 5px;
+  font-size: 15px;
+  margin-top: 1px;
+}
+
+.date-picker input[type='date'],
+.increment-options select {
+  padding: 6px;
+  font-size: 14px;
+  margin-right: 10px; /* Add spacing between elements */
+}
+
+.no-margin {
+  margin-top: -50px; /* Remove bottom margin */
+}
+
+.choose-section {
+  margin-right: 10px;
+}
+
+.delete-section-btn {
+  position: absolute;
+  top: 60px;
+  right: -50px; /* Adjust the distance from the right side */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  font-weight: bold;
+}
+
+.delete-section-btn:hover {
+  background-color: #cc0000;
+}
+
+.printed-content-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #000a3c;
+  font-size: 15px;
+}
+
+.printed-content-box h3 {
+  margin-top: 0;
+}
+
+.printed-content-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.printed-content-box ul li {
+  margin-bottom: 5px;
+}
